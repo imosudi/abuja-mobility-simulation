@@ -278,10 +278,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Team
 
-- **Project Lead**: [Your Name]
-- **Simulation Architecture**: [Team Member 2]
-- **AI Integration**: [Team Member 3]
-- **Infrastructure Modeling**: [Team Member 4]
+- **Project Lead**: [Mosudi I. O]
+- **Simulation Architecture**: 
+- **AI Integration**: 
+- **Infrastructure Modeling**: 
 
 ## 🙏 Acknowledgments
 
