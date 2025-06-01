@@ -1,3 +1,26 @@
+# =============================================================================
+# GENERAL DEVELOPMENT
+# =============================================================================
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# =============================================================================
+# PYTHON ENVIRONMENT
+# =============================================================================
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -27,8 +50,6 @@ share/python-wheels/
 MANIFEST
 
 # PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
 
@@ -83,41 +104,21 @@ profile_default/
 ipython_config.py
 
 # pyenv
-#   For a library or package, you might want to ignore these files since the code is
-#   intended to run in multiple environments; otherwise, check them in:
-# .python-version
+.python-version
 
 # pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
-
-# UV
-#   Similar to Pipfile.lock, it is generally recommended to include uv.lock in version control.
-#   This is especially recommended for binary packages to ensure reproducibility, and is more
-#   commonly ignored for libraries.
-#uv.lock
+Pipfile.lock
 
 # poetry
-#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
-#   This is especially recommended for binary packages to ensure reproducibility, and is more
-#   commonly ignored for libraries.
-#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
-#poetry.lock
+poetry.lock
 
 # pdm
-#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
-#pdm.lock
-#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
-#   in version control.
-#   https://pdm.fming.dev/latest/usage/project/#working-with-version-control
+pdm.lock
 .pdm.toml
 .pdm-python
 .pdm-build/
 
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+# PEP 582
 __pypackages__/
 
 # Celery stuff
@@ -160,25 +161,8 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# PyCharm
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
-
 # Abstra
-# Abstra is an AI-powered process automation framework.
-# Ignore directories containing user credentials, local state, and settings.
-# Learn more at https://abstra.io/docs
 .abstra/
-
-# Visual Studio Code
-#  Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore 
-#  that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
-#  and can be added to the global gitignore or merged into this file. However, if you prefer, 
-#  you could uncomment the following to ignore the enitre vscode folder
-# .vscode/
 
 # Ruff stuff:
 .ruff_cache/
@@ -187,8 +171,328 @@ cython_debug/
 .pypirc
 
 # Cursor
-#  Cursor is an AI-powered code editor. `.cursorignore` specifies files/directories to
-#  exclude from AI features like autocomplete and code analysis. Recommended for sensitive data
-#  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# =============================================================================
+# SIMULATION TOOLS & FRAMEWORKS
+# =============================================================================
+
+# SUMO (Traffic Simulation)
+*.sumo.cfg
+*.sumocfg
+*.rou.xml
+*.add.xml
+*.det.xml
+*.gui-settings.cfg
+sumo-launchd.conf
+*.fcd.xml
+*.emission.xml
+*.battery.xml
+*.chargingstations.xml
+*.meandata.xml
+*.tripinfo.xml
+*.lanechanges.xml
+*.netstate.xml
+*.queue.xml
+*.summary.xml
+*.vehroutes.xml
+*.vtk
+tripinfos/
+outputs/
+traces/
+
+# NetLogo
+*.nlogo.tmp
+*.nlogo~
+tmp/
+behaviors space runs/
+
+# SimPy (Discrete Event Simulation)
+*.log
+*.trace
+simpy_*.db
+
+# NS-3 (Network Simulation)
+ns3-*
+*.pcap
+*.tr
+*.xml
+*.nam
+*.plt
+scratch/
+examples/
+src/
+build/
+bindings/
+utils/waf*
+
+# CARLA (if used for advanced traffic simulation)
+CarlaUE4/
+Unreal/Carla/
+PythonAPI/carla/agents/__pycache__/
+
+# =============================================================================
+# SIMULATION DATA & OUTPUTS
+# =============================================================================
+
+# Large simulation input data files (use Git LFS instead)
+*.osm
+*.shp
+*.shx
+*.dbf
+*.prj
+*.gpx
+large_datasets/
+raw_data/
+traffic_data/
+sensor_data/
+
+# Simulation output files
+results/
+outputs/
+logs/
+traces/
+analytics/
+reports/
+visualizations/
+*.csv
+*.json
+*.parquet
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+
+# Video and image outputs
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.gif
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+screenshots/
+animations/
+plots/
+
+# Large model files
+*.model
+*.weights
+*.checkpoint
+*.pt
+*.pth
+*.h5
+models/trained/
+checkpoints/
+
+# =============================================================================
+# DATABASES & CACHING
+# =============================================================================
+
+# SQLite databases
+*.sqlite
+*.sqlite3
+*.db
+
+# PostgreSQL
+*.pgsql
+
+# Redis dumps
+dump.rdb
+
+# =============================================================================
+# CONFIGURATION & SECRETS
+# =============================================================================
+
+# Environment variables
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Configuration files with sensitive data
+config/production.yml
+config/secrets.yml
+config/local.yml
+config/database.yml
+secrets/
+credentials/
+
+# API keys and tokens
+*.key
+*.pem
+*.crt
+*.p12
+api_keys.txt
+tokens.json
+
+# =============================================================================
+# CONTAINERIZATION & DEPLOYMENT
+# =============================================================================
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+.docker/
+volumes/
+
+# Kubernetes
+*.kubeconfig
+k8s-secrets/
+
+# Vagrant
+.vagrant/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# =============================================================================
+# MONITORING & LOGGING
+# =============================================================================
+
+# Monitoring data
+grafana/data/
+prometheus/data/
+metrics/
+monitoring/
+
+# =============================================================================
+# DOCUMENTATION
+# =============================================================================
+
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.out
+*.nav
+*.snm
+*.vrb
+
+# =============================================================================
+# RESEARCH & ANALYSIS
+# =============================================================================
+
+# R files (if using R for statistical analysis)
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+
+# MATLAB files
+*.asv
+*.mex*
+*.fig
+*.mat
+*.slx.autosave
+
+# Experimental results
+experiments/
+benchmarks/
+validation/
+sensitivity_analysis/
+parameter_sweeps/
+
+# Paper drafts and presentations
+drafts/
+presentations/
+*.docx
+*.pptx
+
+# =============================================================================
+# PERFORMANCE & PROFILING
+# =============================================================================
+
+# Profiling results
+*.prof
+*.profile
+prof/
+profiling/
+
+# Memory profiling
+*.mprof
+memory_profiler/
+
+# Benchmarking
+benchmark_results/
+performance_tests/
+
+# =============================================================================
+# OPERATING SYSTEM
+# =============================================================================
+
+# macOS
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Windows
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# =============================================================================
+# BACKUP & TEMPORARY FILES
+# =============================================================================
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# =============================================================================
+# PROJECT-SPECIFIC EXCLUSIONS
+# =============================================================================
+
+# Large road network files (should use Git LFS)
+networks/large/
+maps/high_resolution/
+elevation_data/
+
+# Simulation scenarios with large data
+scenarios/full_city/
+scenarios/peak_traffic/
+
+# AI model training data
+training_data/
+datasets/large/
+
+# Real-time data streams (temporary)
+live_data/
+streaming/
+realtime_feeds/
+
+# Third-party dependencies (if not using package managers)
+vendor/
+third_party/
+external/
