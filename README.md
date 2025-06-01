@@ -278,7 +278,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Team
 
-- **Project Lead**: [Mosudi]
+- **Project Lead**: Mosudi I. O.
 - **Simulation Architecture**: 
 - **AI Integration**: 
 - **Infrastructure Modeling**: 
